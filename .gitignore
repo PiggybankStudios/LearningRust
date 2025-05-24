@@ -1,3 +1,6 @@
 _build/
 Cargo.lock
 *.sublime-workspace
+_media/RustForPythonColorImages.pdf
+*.exe
+*.pdb
