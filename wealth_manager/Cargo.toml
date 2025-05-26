@@ -11,5 +11,5 @@ serde="1.0.117"
 serde_json="1.0.59"
 
 [[bin]]
-name = "wealth_manager"
+name = "wealth_manager_app"
 path = "src/wealth_manager.rs"

@@ -1,3 +1,4 @@
+//! This is the documentation comment for the wealth_manager cargo package!
 
 use serde_json::{json, Value as jsValue};
 /*
@@ -13,6 +14,27 @@ pub enum Value {
 }
 */
 
+mod structs;
+use structs::stock::Stock;
+
+/// Adds two numbers together
+///
+/// # Arguments
+/// * a (i32): The first number
+/// * b (i32): The second number
+///
+/// # Returns
+/// (i32): The sum of `a` and `b`
+///
+/// # Example
+/// ```rust
+/// result: i32 = add_numbers(42, 69); //result = 111
+/// ```
+pub fn add_numbers(a: i32, b: i32) -> i32
+{
+	return a + b;
+}
+
 fn main()
 {
     let stock: jsValue = json!({
@@ -22,4 +44,8 @@ fn main()
     });
     println!("first price: {}", stock["history"][0]);
     println!("json: {}", stock.to_string());
+    
+    let stock: Stock = Stock::new("MonolithAI", 36.5);
+    println!("here is the stock name: {}", stock.name);
+    println!("here is the stock price: {}", stock.current_price);
 }
