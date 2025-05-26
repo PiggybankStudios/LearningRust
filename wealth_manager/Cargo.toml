@@ -1,6 +1,15 @@
 [package]
 name = "wealth_manager"
-version = "0.1.0"
 edition = "2024"
 
+# This options only matter when distributing on crates.io or similar
+version = "0.1.0"
+authors = ["Taylor Robbins"]
+
 [dependencies]
+serde="1.0.117"
+serde_json="1.0.59"
+
+[[bin]]
+name = "wealth_manager"
+path = "src/wealth_manager.rs"
