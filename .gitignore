@@ -4,3 +4,4 @@ Cargo.lock
 _media/RustForPythonColorImages.pdf
 *.exe
 *.pdb
+wealth_manager/target/
